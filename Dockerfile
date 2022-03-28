@@ -6,7 +6,7 @@ RUN install_clean git scons build-essential libao4 libao-dev pkg-config flite1-d
     git clone https://github.com/vantu5z/RHVoice-dictionary.git /opt/RHVoice-dictionary && \
     mkdir -p /usr/local/etc/RHVoice/dicts/Russian/ && \
     mkdir -p /opt/data
-RUN cp /opt/RHVoice-dictionary/*.txt /usr/local/etc/RHVoice/dicts/Russian/ && \
+RUN cp /opt/RHVoice-dictionary/dicts/Russian/*.txt /usr/local/etc/RHVoice/dicts/Russian/ && \
     cp -R /opt/RHVoice-dictionary/tools /opt/ && \
     pip3 install flask pymorphy2 && \
     cd /opt && rm -rf /opt/RHVoice && \
