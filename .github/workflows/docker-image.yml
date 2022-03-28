@@ -10,6 +10,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Set Env
+        run: |
+          env
+          echo "BUILD_TAG=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_ENV
+          echo "BUILD_SHA=${GITHUB_SHA:0:7}" >> $GITHUB_ENV
       - uses: actions/checkout@v2
       - name: Set Env
         run: |
