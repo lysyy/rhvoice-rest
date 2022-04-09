@@ -28,6 +28,6 @@ jobs:
         with:
           image: rhvoice-rest
           registry: ghcr.io
-#          githubOrg: lysyy # optional
+          githubOrg: lysyy # optional
           username: ${{ secrets.GHCR_USERNAME }}
           password: ${{ secrets.GHCR_PASSWORD }}
