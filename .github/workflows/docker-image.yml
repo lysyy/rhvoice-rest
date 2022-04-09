@@ -29,5 +29,5 @@ jobs:
           image: rhvoice-rest
           registry: ghcr.io
           githubOrg: lysyy # optional
-          username: ${{ secrets.GHCR_USERNAME }}
-          password: ${{ secrets.GHCR_PASSWORD }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
